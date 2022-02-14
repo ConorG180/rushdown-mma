@@ -2,17 +2,12 @@
 
 :root {
     /* color scheme */
-    /* #161214; */
-    /* #141313; */
-    /* #111010; */
-    /* #0f0e0e; */
 --primary-color: #0f0e0e;
 --secondary-color: #B30606;
 --secondary-color-light: #f00404;
  --secondary-color-dark: #700000; /* #5B0000 */
 --tertiary-color: #8A286F;
---complimentary-color-light: #06ffff;
---complimentary-color-dark: #06B3FF;
+--complimentary-color-light: #fbff0fef;
 --text-color: #e6f0f5;
 
 /* fonts */
@@ -40,7 +35,7 @@ h2{
 }
 
 h3{
-    color: var(--secondary-color-dark);
+    color: var(--secondary-color);
 }
 p{
     color: var(--text-color);
@@ -98,6 +93,7 @@ object-fit: cover;
 }
 
 #gym-class-cards{
+    padding: 2rem 0 4rem 0;
     grid-area: gym-class-cards;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -110,7 +106,9 @@ object-fit: cover;
 grid-column: 1/4;
 padding: 4rem 0 0 0;
 }
-
+#gym-class-cards-header span{
+    color: var(--complimentary-color-light)
+}
 #gym-class-cards img {
     max-width: 100%;
     max-height: 100%;
@@ -130,6 +128,7 @@ padding: 4rem 0 0 0;
     grid-area: about-us;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    padding: 4rem 0;
 }
 #about-us h2{
     grid-column: 1/7;
@@ -211,9 +210,10 @@ grid-template-columns: repeat(6, 1fr);
 }
 .fa-brands{
     transition: 300ms;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    -webkit-text-stroke: 0.05px white;
 }
 .fa-brands:hover{
-    color: var(--secondary-color);
+    color: var(--complimentary-color-light);
     transform: scale(1.1);
 }
