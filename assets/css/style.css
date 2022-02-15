@@ -80,7 +80,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     padding: 8.5rem 0 2rem 0;
-    border: 0.3rem solid var(--secondary-color-dark);
+    border-bottom: 0.3rem solid var(--secondary-color-dark);
     color: var(--text-color);
 }
 header ul {
@@ -107,6 +107,8 @@ width: 100%;
 max-width: 100%;
 aspect-ratio: 3/1;
 object-fit: cover;
+border-top: 0.3rem solid var(--secondary-color-dark);
+border-bottom: 0.3rem solid var(--secondary-color-dark);
 }
 
 #gym-class-cards{
@@ -199,6 +201,7 @@ padding: 4rem 0 0 0;
 }
 #virtual-tour-block video {
     max-width: 100%;
+    border: 0.3rem solid var(--secondary-color-dark);
 }
 
 /* Footer */
@@ -206,7 +209,7 @@ footer {
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    border: 0.3rem solid var(--secondary-color-dark);
+    border-top: 0.3rem solid var(--secondary-color-dark);
     padding: 3.5rem;
     margin-top: 5rem;
 }
@@ -227,6 +230,7 @@ grid-template-columns: repeat(6, 1fr);
     grid-column: 4/6;
     max-width: 100%;
     height: 100%;
+    outline: 0.3rem solid var(--secondary-color-dark);
 }
 
 #contact-us-container h2{
