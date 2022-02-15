@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Poppins&display=swap');
 
 :root {
     /* color scheme */
@@ -11,7 +11,8 @@
 --text-color: #e6f0f5;
 
 /* fonts */
---accent-font: "Bebas Neue", ariel, cursive;
+--accent-font: "Bebas Neue", ariel, "sans-serif";
+--accent-font-light:'Oswald', ariel, "sans-serif";
 --primary-font: poppins, helvetica, "sans-serif"
 }
 
@@ -24,24 +25,36 @@ html{
     box-sizing: border-box;
 }
 
-h1 {
+h2,h3{
     color: var(--secondary-color-light);
-    font-size: 7rem;
-    letter-spacing: 0.1em;
-    text-shadow: 3px 3px 4px white;
-}
-h2{
-    color: var(--secondary-color-light);
+    font-family: var(--accent-font-light);
+    text-align: center;
 }
 
+h1 {
+    font-family: (--accent-font);
+    font-size: 8rem;
+    letter-spacing: 1.1rem;
+    color: var(--secondary-color-light);
+    text-shadow: 3px 3px 4px white;
+}
+
+h2{
+    font-size: 4.5rem;
+    letter-spacing: 0.25rem;
+}
 h3{
-    color: var(--secondary-color);
+    margin-top: 0.5rem;
+    font-size: 2.75rem;
+    letter-spacing: 0.5rem;
 }
 p{
     color: var(--text-color);
+    font-family: var(--primary-font);
 }
 ul{
     color: var(--text-color);
+    font-family: var(--primary-font);
 }
 
 body {
@@ -57,6 +70,8 @@ body {
     font-weight: 400;
     line-height: 1.4;
     background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--primary-font);
 }
 
 header {
@@ -64,7 +79,7 @@ header {
     size: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    padding: 5rem 0 1rem 0;
+    padding: 8.5rem 0 2rem 0;
     border: 0.3rem solid var(--secondary-color-dark);
     color: var(--text-color);
 }
@@ -74,6 +89,8 @@ header ul {
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
+    font-family: var(--accent-font);
+    font-size: 3rem;
 }
 
 #hero-img-container{
@@ -134,7 +151,7 @@ padding: 4rem 0 0 0;
     border: none;
     border-radius: 0 0 1rem 1rem;
     color: var(--text-color);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .gym-card button:hover{
     animation-name: shake;
@@ -150,12 +167,16 @@ padding: 4rem 0 0 0;
 }
 #about-us h2{
     grid-column: 1/7;
-    text-align: center;
-    padding: 5rem 0 0 1rem;
 }
+
 #about-us h3{
-    text-align: center;
+    padding-bottom: 2rem;
 }
+
+#about-us p{
+    padding-bottom: 2rem;
+}
+
 #about-us-container {
     grid-column: 2/6;
     display: grid;
@@ -168,6 +189,10 @@ padding: 4rem 0 0 0;
 }
 #about-us-block ul {
     list-style-type: none;
+    padding: 0;
+}
+#about-us-block ul li{
+    padding: 0.5rem;
 }
 #virtual-tour-block{
     grid-column: 4/7;
@@ -196,8 +221,8 @@ grid-template-columns: repeat(6, 1fr);
     display: flex;
     flex-direction: column;
     align-items: space-between;
-
 }
+
 #google-maps {
     grid-column: 4/6;
     max-width: 100%;
@@ -240,23 +265,29 @@ grid-template-columns: repeat(6, 1fr);
 @keyframes shake {
     0% {
     transform: rotate(-15deg) translateX(1.5rem);
+    background-color: transparent;
     }
     20% {
     color: yellow;
     transform: rotate(15deg) translateX(-1.5rem);
+    background-color: transparent;
     }
     40% {
     transform: rotate(-15deg) translateX(1.5rem);
+    background-color: transparent;
     }
     60% {
     color: yellow;
     transform: rotate(50deg) translateX(-1.5rem);
+    background-color: transparent;
     }    
     80% {
     transform: rotate(-65deg) translateX(1.5rem);
+    background-color: transparent;
     }
     100% {
     color: yellow;
     transform: rotate(-15deg) translateX(1.5rem);
+    background-color: transparent;
     }
 }
