@@ -57,6 +57,11 @@ ul{
     font-family: var(--primary-font);
 }
 
+a{
+    color: var(--text-color);
+    font-size: 4rem;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -92,7 +97,6 @@ header ul {
     font-family: var(--accent-font);
     font-size: 3rem;
 }
-
 #hero-img-container{
     grid-area: hero-img;
 }
